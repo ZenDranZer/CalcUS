@@ -1,0 +1,213 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{xparse}
+\usepackage{enumitem}
+\setlist[description]{
+  font={\sffamily\bfseries},
+  labelsep=0pt,
+  labelwidth=\interviewlen,
+  leftmargin=\interviewlen,
+}
+\newlength{\interviewlen}
+
+\NewDocumentCommand {\setspeaker} { mo } {%
+  \IfNoValueTF{#2}
+  {\expandafter\newcommand\csname#1\endcsname{\item[#1:]}}%
+  {\expandafter\newcommand\csname#1\endcsname{\item[#2:]}}%
+  \IfNoValueTF{#2}
+  {\settowidth{\interviewlen}{#1}}%
+  {\settowidth{\interviewlen}{#2}}%
+}
+
+\setspeaker{me}[Sarvesh Vora]
+\setspeaker{prof}[Bhupendra Kesaria]
+
+\addtolength{\interviewlen}{1em}%
+
+\title{SOEN 6481 - Software Requirement Specification}
+\author{Problem 2 by Sarvesh Vora}
+\date{July 14, 2019}
+
+
+\begin{document}
+
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\section{Problem 2 : A : Find a suitable Interviewee.}
+\subsection{Make a list of appropriate candidates from Physics or Mathematics background.}
+\begin{enumerate}
+    \item Prof. Bhupendra Kesaria - Assistant Professor UPG college
+    \item Dr. Brigitte Jaumard - Research Chair Concordia University
+    \item Prof. Devin G. - Purdue University
+    \item Prof. Jeremy B. -  University of Washington
+    \item Kia Babashahiashtiani - PhD student Concordia University
+    \item Bhargavi Reddy - Student Concordia University (Aerospace Engineering)
+\end{enumerate}
+\subsection{Selection of Interviewee.}
+\hfill \break
+\textbf{Prof. Bhupendra Kesaria: }
+\paragraph{Prof. Bhupendra Kesaria has cleared National Eligibility Test (NET) in Computer Science in the year 2012. He has done Masters in Computer Applications from Indira Gandhi National Open University(IGNOU). He has done Advanced Diploma in Computer Applications from IGNOU. He has done his Bachelors in Computer Applications from IGNOU. Prof. Kesaria has worked in industry with companies like Khatau Group of Companies, Avnet Technologies. He had been a consultant to companies like Mail Order Solutions Pvt Ltd and Evergreen Engineering Company. He has 13 years of teaching experience. He has an industry experience of 12 years. He has taught in Universities like IGNOU,ICFAI,Manipal,ITM,TMU and in National Institute of Fashion Technology.}
+\hfill \break
+\hfill \break
+\textbf{Committee :}  Research Cell.
+\hfill \break
+\hfill \break
+\textbf{Email :}  bhupendra.kesaria@upgcm.ac.in
+\newpage
+\section{Problem 2 : B : Prepare Interview Questions.}
+\hfill \break
+\begin{table}[h!]
+    \begin{center}
+        \caption{Following are the questions for interview:}
+        \label{tab:table1}
+        \begin{tabular}{c|c}
+        \toprule
+         \textbf{\#Q} & \textbf{Questions}  \\
+         \hline
+         1 & What is your good name? \\
+         \hline
+         2 & What line of work are you in? \\
+         \hline
+         3a & If Student: \\
+         & Where do you study? \\
+         & What is your major? \\
+         \hline
+         3b & If Professor: \\
+         & Where do you teach? \\
+         & What are your research areas and interests ? \\
+         \hline
+         4 & What is an algebraic number? \\
+         \hline
+         5 & What is irrational number? \\
+         \hline
+         6 & can you list few irrational numbers? \\
+         \hline
+         7 & What is transcendental number? \\
+         \hline
+         8 & Would you describe what is logarithm? \\
+         \hline
+         9 & How about $e$ ? and why its useful in mathematics ? \\
+         \hline
+         10 & How will you describe a process which is exponentially described ? \\
+         \hline
+         11 & Elicit, what is Natural logarithm ? \\
+         \hline
+         12 & How time is related to Natural log? \\
+         \hline
+         13 & What if I have a negative value of n in $\ln(n)$ ? \\
+         \hline
+         14 & What about fractional value of n? \\
+         \hline
+         15 & What is $\ln(n)$? \\
+         \hline
+         16 & What are various usage/characteristics of $\ln(n)$? \\
+         \hline
+         17 & What is Divergent Series ? \\
+         \hline
+         18 & What is Harmonic series ? \\
+         \hline
+         19 & What is Alternating Harmonic Series (AHS)? \\
+         \hline
+         20 & What are the potential usage of AHS? \\
+         \hline
+         21 & How $\ln(n)$ useful in finance ? Can you explain it with an example?\\
+         \hline
+         22 & $\ln(2)$ is available in Scientific calculators but is it useful to have it in simple calculator?\\
+         \hline
+         23 & What could be the possible challenges faced if scientific calculator do not have $\ln(2)$ functionality ?\\
+         \hline
+         24 & Do you prefer a direct button for $\ln(2)$ in a calculator?\\
+         \hline
+         25 & What is an acceptable number of digits after the decimal point for $\ln(2)$ ?\\
+         \bottomrule
+         26 & We have a dedicated button for $\pi$ in calculator, Why can't we have buttons for other irrational numbers?\\
+         \bottomrule
+    \end{tabular}
+    \end{center}
+\end{table}
+\newpage
+\section{Problem 2 : C : Conduct Interview.}
+\begin{description}
+\me Good Morning!
+\prof Good Morning!
+\me What is your good name?
+\prof Bhupendra Kesaria.
+\me What line of work are you in?
+\prof I am a professor. 
+\me Where do you teach?
+\prof At Usha Pravin Gandhi Collage of Management. I conduct various courses like Applied mathematics, Artificial Intelligence, Software Engineering, etc..
+\me What are your research areas and interests?
+\prof My research area consist of renewable energy sources and how we can increase generation of such energy using A.I. and advance machinery.
+\me That's inspiring! Thanks for accepting my request and your time. Let's begin the interview. \\
+What are an algebraic numbers?
+\prof Any complex number which has rational coefficients and is a root of a non-zero polynomial.
+\me What are irrational numbers?
+\prof First let me explain what are rational numbers, A rational number is a number which can be written as a ratio of two integers. An irrational number is something that we can not represent as ratio of two integers, their decimal goes on forever without repeating.
+\me Can you list few irrational numbers?
+\prof The famous one is $\pi$, then, $\sqrt{2}$, $\sqrt{3}$, $\sqrt{99}$, Euler's Number ($e$),etc.
+\me What is transcendental number?
+\prof A transcendental number is a real number or complex number, that is not an algebraic number.It's not a root of a nonzero polynomial equation with integer coefficients.
+\me Would you describe what is logarithm?
+\prof Sure, Logarithm of a given number is $x$ is exponent to which the base $b$ must be raise to produce $x$. \\
+$\log_b{x} = y$ if and only if $b^y = x$ . \\
+Logarithms are a way of showing how big a number ($x$) is in terms of how many times ($y$) you have to multiply a certain number ($b$) to get it. If you are using 2 as your base, then a logarithm means "how many times do I have to multiply 2 to get to this number?".
+\me What are its potential usage?
+\prof Well, logarithms are used in multiple way such as money growing with fixed interest rates, sound made by a bell or measuring earthquake magnitudes. An earthquake can be 100 to 10,00,000 in size, and if we represent it in a graph it would be stupid to see those ranges together. Hence If you instead take the logarithm of each number, you may get 1, 2, and 7. That makes a bar graph you can understand.
+\me How about $e$ ? and why its useful in mathematics ?
+\prof $e$ is called Euler’s Number which has value of 2.7182 and so on. Its a irrational transcendental number. It has an unique property that when differentiated, it generates itself. They are used in equations involving decays, growths. It is also used in normal distribution function.
+\me  How will you describe a process which is exponentially described ?
+\prof  When growth of a process becomes more rapid in relation to the growing total number, then we can say that the process is exponential. It can be described as logarithm of n to the base e $\log_e{n}$.
+\me Elicit, what is Natural logarithm ?
+\prof Natural logarithm $\ln(n)$ or logarithm of n to the base e $\log_e{n}$ where $e$ is the constant with value 2.7182 and so on.
+\me How time is related to Natural log?
+\prof The natural log gives you the time needed to reach a certain level of growth. For an example, suppose you have an investment in a product with an interest rate of 100\% per year, growing continuously.If you want 10x growth, assuming continuous compounding, you’d wait only $\ln(10)$ or 2.302 years.
+\me What if I have a negative value of n in in(n)? like How much time does it take to grow the bacteria colony from 1 to -3?
+\prof Practically, Its impossible! We can not have negative amount of bacteria or grow the bacteria till a negative amount. Natural log of a negative number is UNDEFINED, where UNDEFINED just means “there is no amount of time you can wait” to get a negative amount.
+\me What about fractional value of n?
+\prof Well, for fraction values of n we really need to consider time. We actually need a time machine to go back in time and see the growth.
+\me How?
+\prof Lets consider an example of natural log of $\frac{1}{2}$ which is $\ln(\frac{1}{2})$, If we reverse the fraction we will get $\ln(-2)$ which is equal to $-\ln(2)$. We know the value of $\ln(2)$ is 0.693, Therefore the final value will be $-0.693$ amount of time, Which is impossible to go back in time to achieve half of what we have right now.
+\me What is $\ln(2)$?
+\prof Natural log of 2 will give you the amount after twice the time at a steady growth.
+\me What are various usage/characteristics of $\ln(2)$?
+\prof Its a irrational number and has transcendental property. The uses of $\ln(2)$ are wide in finance where you need to calculate the time it takes to double the money over a fixed interest rate and so on.
+\me What is Divergent Series ?
+\prof It's a series of infinite sequence of partial sums of the series that does not have a finite limit, hence any series in which the individual terms do not approach zero diverges.
+\me What is Harmonic series ?
+\prof Its a divergent series, but very slow. Its sum of all $\frac{1}{n}$ where n starts from 1 to infinity.
+\me What is Alternating Harmonic Series?
+\prof Its sum of $\frac{1}{n}$ where n starts from 1 to infinity and the sign alternates from positive to negative and vice versa.\\
+Its a conditional convergent series,because both the positive and negative parts of your series diverge but the divergences cancel each other out. The value of this series is equal to $\ln(2)$. \\
+$\sum_1^\infty{\frac{(-1)^{k+1}}{k}} = \ln(2) = 0.693..$
+\me What are the potential usage of Alternating Harmonic Series?
+\prof As I said before that the Alternating Harmonic Series converges to $\ln(2)$, applications such as finance, or where time needs to be taken into consideration we use such series.
+\me How $\ln(n)$ useful in finance ? Can you explain it with an example?
+\prof Lets take an example of a Fixed deposit, we need a 2X growth of the amount at let's say 10\% of the growth rate, It will take 6.93 years.
+\me $\ln(2)$ is available in Scientific calculators but is it useful to have it in simple calculator?
+\prof It actually depends on the user and its usage. In my opinion Simple calculator do not require $\ln(2)$ since a majority of users will use such calculator where in they do not require such function because they use it for basic math problems.
+\me What could be the possible challenges faced if scientific calculator do not have $\ln(2)$ functionality ?
+\prof Well, theoretically speaking, it's difficult to calculate and maintain the value of $\ln(2)$. Maintaining decimals are little tricky. On the other side of coin, if we consider first 3-4 decimal digits like 0.6931 it can converge to 0.693 and practically its easy to remember it but since we not only calculate $\ln(2)$ but we use $\ln(n)$ function, its not feasible to remove $\ln(n)$ function because we need it for other values of $n$.
+\newpage
+\me Do you prefer a direct button for $\ln(2)$ in a calculator?
+\prof I guess there is no need to have a separate button for $\ln(2)$ since we can compute it using $\ln(n)$ function.
+\me What is an acceptable number of digits after the decimal point for $\ln(2)$ ?
+\prof According to me for the basic mathematical computation, its feasible to consider the first 3 digits after decimal but again it depends at what level of abstraction you want. According to mathematical rules, we can say that $\ln(2) = 0.6931 \approx 0.693 \approx 0.69 \approx 0.7$.
+\me We have a dedicated button for $\pi$ in calculator, Why can't we have buttons for other irrational numbers?
+\prof The use of $\pi$ is far more greater than any other irrational number in mathematics, We use it in trigonometry, geometry, etc. Pie is the most intriguing and important number in whole mathematics. Therefore we have a dedicated button for $\pi$.
+\end{description}
+
+\newpage
+\section{Conclusion.}
+\quad \quad \quad There are a lot of things to learn from this interview. Starting off with very first thing, The interviewee Prof. Bhupendra Kesaria was the perfect candidate for this interview because he has the in-depth knowledge and tremendous experience in industry and teaching. Interview was a chat based interview because Prof. Kesaria is lives in India. I have articulated the whole conversation in this documentation. By this conversation, various mathematical concepts have became lines over the rock. Initially I was at $0^{th}$ level of Ignorance, I only knew that $\ln(2)$ value is 0.6931..., but later after the interview I found myself filled in with quality information. I completely agree with Prof. Kesaria regarding usage of $\ln(2)$. Since the use of $\ln(2)$ is seldom for a non mathematical or related background on daily bases.
+\newline
+According to me, The point that Prof. Kesaria mentioned about level of abstraction for the decimal digits because it's not always necessary to mention huge pile of digits in normal computation where we want an approximate answer but Its also true that when we want a specific and accurate result like in a mission critical or safety critical scenario if we use $\ln(2)$.
+\newline
+Although the $\pi$ number is intriguing and important number in whole mathematics, but I feel that $\ln(2)$ also plays significant role in mathematics and Finance department. There should be a specialized calculator that we can build just for the financial background where in we can indulge such operations.
+\end{document}
