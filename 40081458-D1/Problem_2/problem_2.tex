@@ -4,14 +4,15 @@
 \usepackage{booktabs}
 \usepackage{xparse}
 \usepackage{enumitem}
+
+
+%---------------problem 2 stuff---------------
 \setlist[description]{
   font={\sffamily\bfseries},
   labelsep=0pt,
   labelwidth=\interviewlen,
   leftmargin=\interviewlen,
 }
-\newlength{\interviewlen}
-
 \NewDocumentCommand {\setspeaker} { mo } {%
   \IfNoValueTF{#2}
   {\expandafter\newcommand\csname#1\endcsname{\item[#1:]}}%
@@ -20,37 +21,25 @@
   {\settowidth{\interviewlen}{#1}}%
   {\settowidth{\interviewlen}{#2}}%
 }
-
+\newlength{\interviewlen}
 \setspeaker{me}[Sarvesh Vora]
 \setspeaker{prof}[Bhupendra Kesaria]
 
-\addtolength{\interviewlen}{1em}%
-
-\title{SOEN 6481 - Software Requirement Specification}
-\author{Problem 2 by Sarvesh Vora}
-\date{July 14, 2019}
-
-
-\begin{document}
-
-\maketitle
 \pagenumbering{gobble}
-\newpage
-\tableofcontents
-\newpage
 \pagenumbering{arabic}
 
-\section{Problem 2 : A : Find a suitable Interviewee.}
-\subsection{Make a list of appropriate candidates from Physics or Mathematics background.}
+\begin{document}
+\subsection{Find a suitable Interviewee.}
+\subsubsection{Make a list of appropriate candidates from Physics or Mathematics background.}
 \begin{enumerate}
     \item Prof. Bhupendra Kesaria - Assistant Professor UPG college
     \item Dr. Brigitte Jaumard - Research Chair Concordia University
     \item Prof. Devin G. - Purdue University
     \item Prof. Jeremy B. -  University of Washington
-    \item Kia Babashahiashtiani - PhD student Concordia University
+    \item Kia Babashahiashtiani - Master's student Concordia University
     \item Bhargavi Reddy - Student Concordia University (Aerospace Engineering)
 \end{enumerate}
-\subsection{Selection of Interviewee.}
+\subsubsection{Selection of Interviewee.}
 \hfill \break
 \textbf{Prof. Bhupendra Kesaria: }
 \paragraph{Prof. Bhupendra Kesaria has cleared National Eligibility Test (NET) in Computer Science in the year 2012. He has done Masters in Computer Applications from Indira Gandhi National Open University(IGNOU). He has done Advanced Diploma in Computer Applications from IGNOU. He has done his Bachelors in Computer Applications from IGNOU. Prof. Kesaria has worked in industry with companies like Khatau Group of Companies, Avnet Technologies. He had been a consultant to companies like Mail Order Solutions Pvt Ltd and Evergreen Engineering Company. He has 13 years of teaching experience. He has an industry experience of 12 years. He has taught in Universities like IGNOU,ICFAI,Manipal,ITM,TMU and in National Institute of Fashion Technology.}
@@ -61,18 +50,20 @@
 \hfill \break
 \textbf{Email :}  bhupendra.kesaria@upgcm.ac.in
 \newpage
-\section{Problem 2 : B : Prepare Interview Questions.}
+
+\subsection{Prepare Interview Questions.}
 \hfill \break
-\begin{table}[h!]
-    \begin{center}
+
+\begin{table}[ht!]
         \caption{Following are the questions for interview:}
         \label{tab:table1}
-        \begin{tabular}{c|c}
+        
+        \begin{tabular}{|| c | c ||}
         \toprule
-         \textbf{\#Q} & \textbf{Questions}  \\
-         \hline
-         1 & What is your good name? \\
-         \hline
+        \textbf{\#Q} & \textbf{Questions}  \\
+        \hline
+        1 & What is your good name? \\
+        \hline
          2 & What line of work are you in? \\
          \hline
          3a & If Student: \\
@@ -119,21 +110,26 @@
          \hline
          21 & How $\ln(n)$ useful in finance ? Can you explain it with an example?\\
          \hline
-         22 & $\ln(2)$ is available in Scientific calculators but is it useful to have it in simple calculator?\\
+         22 & $\ln(2)$ is available in Scientific calculators but is it useful to have it in \\
+         & simple calculator?\\
          \hline
-         23 & What could be the possible challenges faced if scientific calculator do not have $\ln(2)$ functionality ?\\
+         23 & What could be the possible challenges faced if scientific calculator do not \\
+         & have $\ln(2)$ functionality ?\\
          \hline
          24 & Do you prefer a direct button for $\ln(2)$ in a calculator?\\
          \hline
          25 & What is an acceptable number of digits after the decimal point for $\ln(2)$ ?\\
-         \bottomrule
-         26 & We have a dedicated button for $\pi$ in calculator, Why can't we have buttons for other irrational numbers?\\
+         \hline
+         26 & We have a dedicated button for $\pi$ in calculator, Why can't we have buttons for \\
+         &other irrational numbers?\\
          \bottomrule
     \end{tabular}
-    \end{center}
 \end{table}
 \newpage
-\section{Problem 2 : C : Conduct Interview.}
+
+\subsection{Conduct Interview.}
+
+
 \begin{description}
 \me Good Morning!
 \prof Good Morning!
@@ -204,7 +200,7 @@ $\sum_1^\infty{\frac{(-1)^{k+1}}{k}} = \ln(2) = 0.693..$
 \end{description}
 
 \newpage
-\section{Conclusion.}
+\subsection{Conclusion.}
 \quad \quad \quad There are a lot of things to learn from this interview. Starting off with very first thing, The interviewee Prof. Bhupendra Kesaria was the perfect candidate for this interview because he has the in-depth knowledge and tremendous experience in industry and teaching. Interview was a chat based interview because Prof. Kesaria is lives in India. I have articulated the whole conversation in this documentation. By this conversation, various mathematical concepts have became lines over the rock. Initially I was at $0^{th}$ level of Ignorance, I only knew that $\ln(2)$ value is 0.6931..., but later after the interview I found myself filled in with quality information. I completely agree with Prof. Kesaria regarding usage of $\ln(2)$. Since the use of $\ln(2)$ is seldom for a non mathematical or related background on daily bases.
 \newline
 According to me, The point that Prof. Kesaria mentioned about level of abstraction for the decimal digits because it's not always necessary to mention huge pile of digits in normal computation where we want an approximate answer but Its also true that when we want a specific and accurate result like in a mission critical or safety critical scenario if we use $\ln(2)$.
