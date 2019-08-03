@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage[compact]{titlesec}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{amssymb}
 
 \title{SOEN 6481 - Software Requirement Specification}
@@ -125,6 +126,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 5 \\
          & \textbf{Acceptance Test} : Given, If any character is entered as an \\
          & operand except for digits or '.' then show Error: E1 \\
+         & \textbf{Constraints: } While input a user shall only enter real numbers.\\
          & \textbf{Sources} : \\
          & 1.~Sarvesh Vora - intuition \\
          \hline
@@ -135,6 +137,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 1 \\
          & \textbf{Acceptance Test} : Accept two integers, let's say 2 and 3 then it \\
          & should produce 5 as an output. \\
+         & \textbf{Constraints: } Both the numbers shall be real numbers.\\
          & \textbf{Sources} : \\
          & 1.~L1 \\
          \hline
@@ -145,6 +148,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 1 \\
          & \textbf{Acceptance Test} : Accept two integers, let's say 2 and 3 then it \\
          & should produce -1 as an output. \\
+         & \textbf{Constraints: } Both the numbers shall be real numbers.\\
          & \textbf{Sources} : \\
          & 1.~L1 \\
          \hline
@@ -154,6 +158,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 2 \\
          & \textbf{Acceptance Test} : Given, if user presses '.' key then It shall \\ 
          & print one '.' and if more than one then show Error: E1. \\
+         & \textbf{Constraints: } There will always be only one decimal point.\\
          & \textbf{Sources} : \\
          & 1.~L2 \\
          \hline
@@ -181,21 +186,23 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          \hline
          US7 & \textbf{Theme} : Validation \\
          & \textbf{Constraint} : As a programmer, My program should not accept \\ 
-         & Operator other than digits and ANS. \\
+         & operand other than digits and ANS. \\
          & \textbf{Priority} : High \\
          & \textbf{Estimate} : 3 \\
          & \textbf{Acceptance Test} : Given, A user is only allowed to put one \\
          & operator per operation, if more Show Error: E2.\\
+         & \textbf{Constraints: } The number shall be real number or ANS.\\
          & \textbf{Sources} : \\
          & 1.~Sarvesh Vora - intuition \\
          \hline
          US8 & \textbf{Theme} : Validation \\
-         & \textbf{Constraint} : As a programmer, If the dinominator is zero in \\ 
-         & division then answer should be Infinity.\\
+         & \textbf{Constraint} : As a programmer, If the denominator is zero in \\ 
+         & division then answer should be zero.\\
          & \textbf{Priority} : High \\
          & \textbf{Estimate} : 3 \\
-         & \textbf{Acceptance Test} : If the dinominator is zero then program \\ 
+         & \textbf{Acceptance Test} : If the denominator is zero then program \\ 
          & should display Infinity on screen as an output.\\
+         & \textbf{Constraints: } Denominator can not be zero.\\
          & \textbf{Sources} : \\
          & 1.~L1 \\
          & 2.~US25 \\
@@ -251,6 +258,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 8 \\
          & \textbf{Acceptance Test} : Given the rate of interest, if not within \\ 
          & the range of 1\% to 100\% then Show Error: E3. \\
+         & \textbf{Constraints: } Any real number between 1 to 100.\\
          & \textbf{Sources} : \\
          & 1.~I2 \\
          \hline
@@ -261,6 +269,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 8 \\
          & \textbf{Acceptance Test} : Given any operation, the result shall be \\ 
          & displayed within 0.1 seconds else show Error: E4 . \\
+         & \textbf{Constraints: } Response time shall be less than 0.1 second.\\
          & \textbf{Sources} : \\
          & 1.~I2 \\
          \hline
@@ -281,6 +290,8 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 1 \\
          & \textbf{Acceptance Test} : Accept two Integer, lets say 10 and 3, it shall\\
          & produce 1 as an output.\\
+         & \textbf{Constraints: } Both the numbers shall be real numbers\\
+         & and denominator can not be equal to zero..\\
          & \textbf{Sources} : \\
          & 1.~L3 \\
          & 2~US25 \\
@@ -304,6 +315,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 2 \\
          & \textbf{Acceptance Test} : Given an Integer, display the factorial \\
          & value of the integer.\\
+         & \textbf{Constraints: } The number shall be real number.\\
          & \textbf{Sources} : \\
          & 1.~L3 \\
          \hline
@@ -314,6 +326,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 3 \\
          & \textbf{Acceptance Test} : Given an Integer n, Display the value of\\
          & log(n) to the base 10.\\
+         & \textbf{Constraints: } The number shall be real number.\\
          & \textbf{Sources} : \\
          & 1.~C1 \\
          \hline
@@ -322,9 +335,13 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Priority} : Low \\
          & \textbf{Estimate} : 1 \\
          & \textbf{Acceptance Test} : Display the value of e =  2.71828\\
+         & \textbf{Constraints: } The value of e shall be accurate till \\
+         & 6 digits after decimal.\\
          & \textbf{Sources} : \\
          & 1.~L7 \\
-         \hline
+        \hline
+        \newpage
+        \hline
          US21 & \textbf{Theme} : Operator \\
          & \textbf{Constraint} : As a student, I'd like to have '$\wedge$' operator\\
          & to perform raise to operation.\\
@@ -332,10 +349,9 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 2 \\
          & \textbf{Acceptance Test} : Given two Integer x \& y, display value\\
          & of x raise to y.\\
+         & \textbf{Constraints: } Both the numbers shall be real numbers.\\
          & \textbf{Sources} : \\
          & 1.~L3 \\
-         \hline
-         \newpage
          \hline
          US22 & \textbf{Theme} : Operator \\
          & \textbf{Constraint} : As an Investment Analyst, I need 'Round' \\
@@ -365,8 +381,11 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 1 \\
          & \textbf{Acceptance Test} : Given two integer lets say 3 and 4, \\
          & it shall produce 12 as an output.\\
+         & \textbf{Constraints: } Both the numbers shall be real numbers.\\
          & \textbf{Sources} : \\
          & 1.~L1 \\
+         \hline
+         \newpage
          \hline
          US25 & \textbf{Theme} : Operator \\
          & \textbf{Constraint} : As a user I want division operator to \\
@@ -375,10 +394,10 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 1 \\
          & \textbf{Acceptance Test} : Given two integer lets say 12 and 4,\\
          & it shall produce 3 as an output.\\
+         & \textbf{Constraints: } Both the numbers shall be real numbers and \\
+         & denominator shall not be zero.\\
          & \textbf{Sources} : \\
          & 1.~L1 \\
-         \hline
-         \newpage
          \hline
          US26 & \textbf{Theme} : Operator \\
          & \textbf{Constraint} : As a student, I want a "clear" operator,\\
@@ -396,7 +415,9 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & value of natural log of 2 to calculate 'Rule of 72'.\\
          & \textbf{Priority} : Medium \\
          & \textbf{Estimate} : 3 \\
-         & \textbf{Acceptance Test} : Derive the value of ln(2) = 0.693147\\
+         & \textbf{Acceptance Test} : Derive the value of $\ln(n)$ = 0.693147\\
+         & \textbf{Constraints: } The value of natural log of 2 shall be \\
+         & accurate till 4 digits after decimal.\\
          & \textbf{Sources} : \\
          & 1.~L4\\
          & 2.~L5\\
@@ -422,6 +443,7 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Estimate} : 8 \\
          & \textbf{Acceptance Test} : Given net income and revenue, calculate\\
          & profit margin.\\
+         & \textbf{Constraints: } Both the values shall be real numbers.\\
          & \textbf{Sources} : \\
          & 1.~L6\\
          & 2.~I2 \\
@@ -436,6 +458,29 @@ For an example, Addition and Subtraction are core operations of a calculator wit
          & \textbf{Sources} : \\
          & 1.~Sarvesh Vora - intuition\\
          \hline
+         US31 & \textbf{Theme} : Operation \\
+         & \textbf{Constraint} : As a user, I need $\log_{10}(n)$ function to calculate\\
+         & the value of $\log_{10}(n)$.\\
+         & \textbf{Priority} : Medium \\
+         & \textbf{Estimate} : 3 \\
+         & \textbf{Acceptance Test} : Given value of n, where n is a real number,\\
+         & it shall give correct value.\\
+         & \textbf{Constraints: } It shall be accurate till 6 digits after the decimal.\\
+         & \textbf{Sources} : \\
+         & 1.~C1\\
+         \hline
+         US32 & \textbf{Theme} : Operation \\
+         & \textbf{Constraint} : As a user, I need a $\ln(n)$ function to \\
+         & calculate Natural logarithm of n.\\
+         & \textbf{Priority} : Medium \\
+         & \textbf{Estimate} : 3 \\
+         & \textbf{Acceptance Test} : Given the value of n, where n is a real number, \\
+         & it shall provide correct value of $\ln{n}$.\\
+         & \textbf{Constraints: } It shall be accurate till 6 digits after the decimal.\\
+         & \textbf{Sources} : \\
+         & 1.~C1\\
+         & 2.~US31 \\
+         \hline
          \hline
 \end{longtable}
 \newpage
@@ -443,71 +488,88 @@ For an example, Addition and Subtraction are core operations of a calculator wit
 \subsection{Traceability Matrix}
 \begin{longtable}{ || l | l | l | l | l | l | l | l ||}
         \hline
-        US ID & Sarvesh Vora - intuition & US25 & US27 & Survey & Interview & Links & Calculator \\ 
+        US ID & Sarvesh Vora - intuition & User Story & Survey & Interview & Links & Calculator \\ 
         \hline
-        US1 & \checkmark &  &  &  &  &  &  \\ 
+        US1 & \checkmark &  &  &  &  &  \\ 
         \hline
-        US2 &  &  &  &  &  & \checkmark -L1 &  \\ 
+        US2 &  &  &  &  & \checkmark -L1 &  \\ 
         \hline
-        US3 &  &  &  &  &  & \checkmark -L1 &  \\ 
+        US3 &  &  &  &  & \checkmark -L1 &  \\ 
         \hline
-        US4 &  &  &  &  &  & \checkmark -L2 &  \\ 
+        US4 &  &  &  &  & \checkmark -L2 &  \\ 
         \hline
-        US5 & \checkmark &  &  &  &  &  &  \\ 
+        US5 & \checkmark &  &  &  &  &  \\ 
         \hline
-        US6 & \checkmark &  &  &  &  &  &  \\ 
+        US6 & \checkmark &  &  &  &  &  \\ 
         \hline
-        US7 & \checkmark &  &  &  &  &  &  \\ 
+        US7 & \checkmark &  &  &  &  &  \\ 
         \hline
-        US8 &  & \checkmark &  &  &  & \checkmark -L1 &  \\ 
+        US8 &  & \checkmark -US25 &  &  & \checkmark -L1 &  \\ 
         \hline
-        US9 &  &  &  & \checkmark -S2 &  &  &  \\ 
+        US9 &  &  & \checkmark -S2 &  &  &  \\ 
         \hline
-        US10 &  &  &  & \checkmark -S3 &  &  &  \\ 
+        US10 &  &  & \checkmark -S3 &  &  &  \\ 
         \hline
-        US11 &  &  &  & \checkmark -S1 &  &  &  \\ 
+        US11 &  &  & \checkmark -S1 &  &  &  \\ 
         \hline
-        US12 &  &  &  & \checkmark -S4 &  &  &  \\ 
+        US12 &  &  & \checkmark -S4 &  &  &  \\ 
         \hline
-        US13 &  &  &  &  & \checkmark -I2 &  &  \\ 
+        US13 &  &  &  & \checkmark -I2 &  &  \\ 
         \hline
-        US14 &  &  &  &  & \checkmark -I2 &  &  \\ 
+        US14 &  &  &  & \checkmark -I2 &  &  \\ 
         \hline
-        US15 & \checkmark &  &  &  &  &  &  \\ 
+        US15 & \checkmark &  &  &  &  &  \\ 
         \hline
-        US16 &  & \checkmark &  &  &  & \checkmark -L3 &  \\ 
+        US16 &  & \checkmark -US25 &  &  & \checkmark -L3 &  \\ 
         \hline
-        US17 & \checkmark &  &  &  &  &  &  \\ 
+        US17 & \checkmark &  &  &  &  &  \\ 
         \hline
-        US18 &  &  &  &  &  & \checkmark -L3 &  \\ 
+        US18 &  &  &  &  & \checkmark -L3 &  \\ 
         \hline
-        US19 &  &  &  &  &  &  & \checkmark -C1 \\ 
+        US19 &  &  &  &  &  & \checkmark -C1 \\ 
         \hline
-        US20 &  &  &  &  &  & \checkmark -L7 &  \\ 
+        US20 &  &  &  &  & \checkmark -L7 &  \\ 
         \hline
-        US21 &  &  &  &  &  & \checkmark -L3 &  \\ 
+        US21 &  &  &  &  & \checkmark -L3 &  \\ 
         \hline
-        US22 &  &  &  &  &  &  & \checkmark -C2 \\ 
+        US22 &  &  &  &  &  & \checkmark -C2 \\ 
         \hline
-        US23 & \checkmark &  &  &  &  &  &  \\ 
+        US23 & \checkmark &  &  &  &  &  \\ 
         \hline
-        US24 &  &  &  &  &  & \checkmark -L1 &  \\ 
+        US24 &  &  &  &  & \checkmark -L1 &  \\ 
         \hline
-        US25 &  &  &  &  &  & \checkmark -L1 &  \\ 
+        US25 &  &  &  &  & \checkmark -L1 &  \\ 
         \hline
-        US26 & \checkmark &  &  &  & \checkmark -I1 &  &  \\ 
+        US26 & \checkmark &  &  & \checkmark -I1 &  &  \\ 
         \hline
-        US27 &  &  &  &  &  & \checkmark -L4 -L5 &  \\ 
+        US27 &  & \checkmark -US32 &  &  & \checkmark -L4 -L5 &  \\ 
         \hline
-        US28 &  &  & \checkmark &  & \checkmark -I2 & \checkmark -L8 &  \\ 
+        US28 &  & \checkmark -US27 &  & \checkmark -I2 & \checkmark -L8 &  \\ 
         \hline
-        US29 &  &  &  &  & \checkmark -I2 & \checkmark -L6 &  \\ 
+        US29 &  &  &  & \checkmark -I2 & \checkmark -L6 &  \\ 
         \hline
-        US30 & \checkmark &  &  &  &  &  &  \\ 
+        US30 & \checkmark &  &  &  &  &  \\ 
+        \hline
+        US31 &  &  &  &  &  & \checkmark -C1 \\ 
+        \hline
+        US32 &  & \checkmark -US31 &  &  &  & \checkmark -C1 \\ 
         \hline
 \end{longtable}
 
+\newpage
+\section{Problem 8:}
+\subsection{Important Information:}
+\textbf{JAR file:} CalcUS.jar \\ \\
+\textbf{Command:} java -jar CalcUS.jar \\ \\
+\textbf{Java Document:} Kindly go to JavaDoc folder and double click on index.html and check on your browser. \\
 
+
+\newpage
+\subsection{Class Diagram:}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.90]{Problem_8.jpg}
+\end{figure}
 
 
 \newpage
@@ -635,5 +697,8 @@ $T \simeq \frac{\ln(2)}{\ln(1+\frac{r}{100})}$
     \item Sarvesh Vora - @ZenDranZer
     \item Mishanian - @mishanian
 \end{enumerate}
-\textbf{Repository Link: } \href{https://github.com/ZenDranZer/CalcUS}{CalcUS by Sarvesh Vora}
+\textbf{Repository Link: } \href{https://github.com/ZenDranZer/CalcUS}{CalcUS by Sarvesh Vora} \\ \\ \\ 
+\noindent
+\textbf{NOTE: } Since this repository is a private repository, The above link will be only visible by collaborators only! \\ Kindly send me an email with your GitHub handle to vorasarvesh99@gmail.com to be one of the collaborators.
+
 \end{document}
